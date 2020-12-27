@@ -6,7 +6,7 @@ var option ={
   friction:0,
    density:0.8
 }
-this.body=Bodies.circle(x,y,Radius,option);
+this.body=Bodies.circle(x,y,Radius/2,option);
 this
 this.Radius=Radius;
   World.add(world,this.body);
@@ -15,7 +15,7 @@ display(){
     var pos=this.body.position
     push();
     translate(pos.x,pos.y);
-    fill(250,150,180);
+    fill(280,210,100);
     ellipseMode(CENTER);
     ellipse(0,0,this.Radius);
 pop();

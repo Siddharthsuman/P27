@@ -15,7 +15,7 @@ var bobObject1,bobObject2,bobObject3,bobObject4,bobObject5;
 }*/
 
 function setup() {
-	createCanvas(800,700);
+	createCanvas(1400,700);
 
 
 	engine = Engine.create();
@@ -24,13 +24,13 @@ function setup() {
 
 	//Create the Bodies Here.
 	//ground=new Ground(width/2,780,1000,20);
-    roof=new Roof(width/2,100,400,20);
+    roof=new Roof(width/2,150,250,20);
     
     
-  bobDiameter=40;
+  bobDiameter=50;
 
   startBobPositionX = width/2;
-  startBobPositionY = height/4+500;
+  startBobPositionY = height/4+300;
   
   bobObject1=new Bob(startBobPositionX -bobDiameter*2,startBobPositionY,bobDiameter);
    bobObject2=new Bob(startBobPositionX -bobDiameter,startBobPositionY,bobDiameter);
@@ -71,7 +71,7 @@ function draw() {
 
 function keyPressed(){
 	if (keyCode === UP_ARROW){
-        Matter.Body.applyForce(bobObject1.body,bobObject1.body.position,{x:-380,y:380})
+        Matter.Body.applyForce(bobObject1.body,bobObject1.body.position,{x:-130,y:130})
 }
 }
 
